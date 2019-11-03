@@ -8,22 +8,21 @@ const myVM = (() => {
     let lightBox = document.querySelector(".lightbox");
   
     //create the social media list
-    function renderSocialMedia(media) {
-      return `<ul class="u-social">
-        ${media.map(item => `<li>${item}</li>`).join(",")}
-        </ul>
-        `;
-    }
+
+    // function renderSocialMedia(media) {
+    //   return `<ul class="u-social">
+    //     ${media.map(item => `<li>${item}</li>`).join(",")}
+    //     </ul>
+    //     `;
+    // }
   
     function parseUserData(person) {
       let targetDiv = lightBox.querySelector(".lb-content");
       let targetImg = lightBox.querySelector("img");
   
       let bioContent = `
-      <p>${person.bio}</p>
-      <h4>Social Media:</h4>
-      <!-- loop thru social media stuff here -->
-      ${renderSocialMedia(person.social)}
+      <p>${person.Introduction}</p>
+      
       `;
   
       targetDiv.innerHTML = bioContent;

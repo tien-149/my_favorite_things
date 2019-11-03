@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
     // should really get the user data here and then fetch it thru, but let's try this asynchronously
     console.log('at the main route');
 
-    let query = "SELECT ID, avatar, Name, Logo, JobTitle FROM tbl_card";
+    let query = "SELECT ID, Name, Publisher, Avatar, Place, AlterEgo, Team FROM tbl_favorite_card";
 
 
     sql.query(query, (err, result) => {
@@ -25,7 +25,7 @@ router.get('/:id', (req, res) => {
     console.log('at the main route');
     console.log(req.params.id); //1 2 3 or whatever comes after the slach
 
-    let query = `select * from tbl_bio where profID="${req.params.id}"`;
+    let query = `select * from tbl_favorite_characters where characterID="${req.params.id}"`;
 
 
     sql.query(query, (err, result) => {
@@ -34,12 +34,12 @@ router.get('/:id', (req, res) => {
         console.log(result); // should see objects wrapped in an array
             // convert the social property into an array before you send it thru
         // render the home view with dynamic data
-        result[0].social=result[0].social.split(",").map(function(item){
-            item = item.trim();
-            //item.trim() remove any empty white space from the text
+        // result[0].social=result[0].social.split(",").map(function(item){
+        //     item = item.trim();
+        //     //item.trim() remove any empty white space from the text
 
-            return item;
-        })
+        //     return item;
+        // })
 
         console.log("after trim/conversion:", result[0]);
         //remder the home view with dynamic data
