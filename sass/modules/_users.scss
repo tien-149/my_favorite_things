@@ -3,25 +3,50 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    
 
     .user-panel {
         flex: 0 1 600px;
         text-align: center;
-        padding: 2px;
+        // padding: 2px;
+        font-family: "Biko";
+
+        a{
+            color: black;
+            border: 1px solid black;
+            width: 100px;
+            height: 20px;
+            padding: 5px;
+            animation: pulse 5s infinite;
+    @keyframes pulse {
+        0% {
+          background-color:white;
+        }
+        100% {
+          background-color: rgb(107, 172, 230);
+        }
+      }
+            
+        }
+       
 
         .u-avatar { 
-            max-width: 300px; }
+            max-width: 300px; 
+            padding: 20px;
+        }
 
         .u-link { 
             display: block; 
             //width: 150px;  
+           
+
             text-decoration: none;
             margin: 0 auto;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 5px;
+            // background-color: rgba(255, 255, 255, 0.8);
+            // padding: 1px;
         }
 
-        h1, h3 { margin: 5px 0; }
+        // h1, h3 { margin: 5px 0; }
     }
 }
 

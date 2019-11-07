@@ -1,13 +1,26 @@
 footer { color: $footer-text-color }
+.question{
+    font-size: 30px;
+    font-family: "JUSTICE LEAGUE", sans-serif;
+}
 
 ul {
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 
     li { 
-        display: inline;
-        
-        a { text-decoration: none; }
+    justify-content: space-between;
     }
+        
+        a { text-decoration: none; 
+            color: black;
+            font-family: $main_font;
+            font-size: 19px;
+            font-style: bold;
+        }
+    
 
 }
