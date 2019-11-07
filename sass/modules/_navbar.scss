@@ -1,13 +1,43 @@
 
 nav {
-    background-color: pink;
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    background-color:none;
+    animation: fadeInAnimation ease 3s; 
+            animation-iteration-count: 2; 
+            animation-fill-mode: forwards; 
+            @keyframes fadeInAnimation { 
+                0% { 
+                    opacity: 0; 
+                } 
+                100% { 
+                    opacity: 1; 
+                }
+        } 
+      
+    
+    
 
     ul {
         margin: 0;
         padding: 0;
+        
 
-        li { display: inline; }
+        li { 
+            display: inline; 
+            padding: 5px;
+            font-size: 20px;
+            font-family: "Myriad Pro";
+            color: black;
+
+
+        }
     }
 
-    a { text-decoration: none; }
+    a { 
+    text-decoration: none;
+    color: black;
+    
+}
 }
