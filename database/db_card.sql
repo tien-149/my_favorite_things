@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Nov 07, 2019 at 10:37 PM
+-- Generation Time: Nov 08, 2019 at 12:52 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.8
 
@@ -23,9 +23,32 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_favorite_characters`
+-- Table structure for table `tbl_favorite_card`
 --
--- Creation: Nov 03, 2019 at 09:41 PM
+
+CREATE TABLE `tbl_favorite_card` (
+  `ID` int(11) NOT NULL,
+  `Name` varchar(100) NOT NULL,
+  `Publisher` varchar(100) NOT NULL,
+  `Avatar` varchar(100) NOT NULL,
+  `Place` varchar(100) NOT NULL,
+  `AlterEgo` varchar(100) NOT NULL,
+  `Team` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_favorite_card`
+--
+
+INSERT INTO `tbl_favorite_card` (`ID`, `Name`, `Publisher`, `Avatar`, `Place`, `AlterEgo`, `Team`) VALUES
+(1, 'Iron Man', 'Marvel Comics', 'ironman.jpg', 'Long Island, New York', 'Anthony Edward \"Tony\" Stark', 'Avengers\r\nDepartment of Defense\r\nForce Works\r\nNew Avengers\r\nGuardians of the Galaxy\r\nIlluminati\r\nMighty Avengers\r\nS.H.I.E.L.D.\r\nStark Industries\r\nStark Resilient\r\nThunderbolts'),
+(2, 'Batman', 'DC Comics', 'batman.jpg', 'Gotham City', 'Bruce Wayne', 'Justice League\r\nBatman Family\r\nBatmen of All Nations\r\nBatman Incorporated'),
+(3, 'Thor', 'Marvel Comics', 'thor.jpg', 'Asgardian', 'Thor Odinson', 'Avengers\r\nWarriors Three\r\nThor Corps\r\nGod Squad\r\nAvengers Unity Squad');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_favorite_characters`
 --
 
 CREATE TABLE `tbl_favorite_characters` (
@@ -52,6 +75,12 @@ INSERT INTO `tbl_favorite_characters` (`ID`, `CharacterID`, `CharacterName`, `In
 --
 
 --
+-- Indexes for table `tbl_favorite_card`
+--
+ALTER TABLE `tbl_favorite_card`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Indexes for table `tbl_favorite_characters`
 --
 ALTER TABLE `tbl_favorite_characters`
@@ -60,6 +89,12 @@ ALTER TABLE `tbl_favorite_characters`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `tbl_favorite_card`
+--
+ALTER TABLE `tbl_favorite_card`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tbl_favorite_characters`
